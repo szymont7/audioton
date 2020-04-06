@@ -1,0 +1,342 @@
+* {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-color: white;
+  min-height: 100vh;
+}
+
+.banner {
+  height: 44vw;
+  color: blue;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+video {
+  width: 100vw;
+  height: auto;
+}
+
+.banner h1 {
+  font-family: nexa-light;
+  color: white;
+  font-weight: 10;
+  text-transform: uppercase;
+  text-align: left;
+  z-index: 1;
+  font-size: 7vw;
+
+  position: relative;
+}
+.banner h1 span {
+  font-weight: 900;
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.logocale {
+  position: absolute;
+  z-index: 99;
+  top: 3.1vw;
+  left: 1.3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 29vw;
+}
+.logo {
+  font-size: 2.5vw;
+  font-family: nokkok;
+  color: white;
+}
+#kreska {
+  margin-top: 0.4vw;
+  height: 2.1vw;
+  width: 1px;
+  background-color: white;
+}
+.logo2 {
+  font-family: nexa-light;
+  color: white;
+  font-size: 1.05vw;
+  font-weight: 400;
+  margin-top: 0.25vw;
+}
+.navbar {
+  position: absolute;
+  top: 3.2vw;
+  right: 2.4vw;
+  z-index: 5;
+  font-size: 2.5vw;
+  font-family: nexa-light;
+}
+.navbar a {
+  color: white;
+
+  margin: 1.7vw;
+}
+.navbar a:hover {
+  color: var(--niebieski);
+}
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: solid 2px var(--niebieski);
+  padding-bottom: 5vw;
+  margin: 2vw 3vw 0 3vw;
+}
+.content > * {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  text-align: center;
+  font-family: nexa-light;
+  font-size: 3vw;
+}
+.content > * > span {
+  font-size: 4vw;
+  font-weight: bolder;
+  color: var(--niebieski);
+}
+.opiscontainer {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.opis {
+  font-family: nexa-light;
+  font-size: 2.3vw;
+  margin: 5vw 6vw 0 8vw;
+}
+.opis > * {
+  margin-bottom: 5vw;
+}
+.opis > * > strong {
+  color: var(--niebieski);
+  font-weight: bolder;
+}
+.napiskontakt {
+  font-size: 5vw;
+  text-align: center;
+  font-family: nexa-light;
+  font-weight: bolder;
+  margin: 3vw 3vw 3vw 3vw;
+  color: var(--niebieski);
+  border-bottom: 2px solid var(--niebieski);
+  padding-bottom: 2vw;
+}
+.kontakt {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2.21vw;
+  font-family: nexa-light;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3vw;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+.kontakt > * > span {
+  color: var(--niebieski);
+  font-weight: bolder;
+}
+.opole {
+  margin-right: 3vw;
+  order: 1;
+}
+.lodz {
+  margin-left: 5vw;
+  order: 2;
+}
+.footer {
+  height: 3vw;
+
+  background-color: white;
+  border-top: solid 2px var(--niebieski);
+  color: var(--niebieski);
+  font-size: 2vw;
+  text-align: center;
+  padding-top: 1vw;
+  font-family: nexa-light;
+  font-weight: bolder;
+  margin: 0 2vw 0 2vw;
+}
+.footer > span {
+  font-family: nokkok;
+  font-weight: lighter;
+}
+
+/*border-right: solid 2px white;*/
+/* kolor */
+
+:root {
+  --niebieski: rgb(51, 92, 146);
+}
+
+@font-face {
+  font-family: nexa-light;
+  src: url(font/nexa-light.otf);
+}
+@font-face {
+  font-family: nokkok;
+  src: url(font/nokkok.ttf);
+}
+
+/*TABLET SCREENS*/
+
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+  video {
+    width: 100vw;
+  }
+  .banner h1 {
+    font-family: nexa-light;
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: left;
+    z-index: 1;
+    font-size: 7.5vw;
+
+    position: relative;
+  }
+  .logo {
+    font-size: 3.5vw;
+  }
+  .logo2 {
+    display: inline;
+  }
+  #kreska {
+    height: 3vw;
+    width: 1px;
+    background-color: white;
+    z-index: 5;
+    margin-top: 0.7vw;
+    display: none;
+  }
+  .logocale {
+    position: absolute;
+    z-index: 99;
+    top: 1.3vw;
+    left: 1.3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28.8vw;
+    overflow: hidden;
+  }
+  .logo2 {
+    margin-top: 0.3vw;
+    font-size: 1.5vw;
+    text-align: center;
+  }
+  .logo2 br {
+    content: " ";
+  }
+  .navbar a {
+    font-size: 4vw;
+  }
+  .navbar {
+    top: 2vw;
+    right: 1.3vw;
+  }
+  .opis {
+    font-size: 3.3vw;
+    margin: 5vw 1vw 0 5vw;
+  }
+  .content > * {
+    font-size: 3vw;
+  }
+  .content > * > span {
+    font-size: 4vw;
+  }
+  .footer {
+    font-size: 3vw;
+    padding: 1vw 0 2vw 0;
+    margin: 0 3vw 0 3vw;
+    overflow: hidden;
+  }
+  .napiskontakt {
+    border-bottom: 2px solid var(--niebieski);
+    font-size: 8vw;
+    padding-bottom: 2vw;
+    margin: 3vw 3vw 3vw 3vw;
+  }
+  .kontakt {
+    font-size: 4vw;
+    margin: 0;
+  }
+  .kontakt > * {
+    margin: 4vw 0 4vw 0;
+  }
+}
+/*MOBILE SCREENS*/
+
+@media screen and (max-width: 599px) {
+  .logo {
+    position: absolute;
+    top: 2.5vw;
+    left: 3vw;
+    z-index: 2;
+    font-size: 2.5vw;
+    font-family: nokkok;
+    color: white;
+  }
+
+  #kreska {
+    top: 3.4vw;
+    bottom: 0;
+    position: absolute;
+    left: 20%;
+    height: 1.8vw;
+    width: 3px;
+    background-color: white;
+    z-index: 5;
+  }
+  .logo2 {
+    position: absolute;
+    z-index: 2;
+    font-family: nexa-light;
+    float: left;
+    top: 2.7vw;
+    left: 25vw;
+    color: white;
+    font-size: 1.2vw;
+    font-weight: 400;
+  }
+  .kontakt {
+    flex-direction: column;
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    font-size: 6vw;
+    font-family: nexa-light;
+    width: 100%;
+    height: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .navbar a {
+    color: white;
+    font-weight: bold;
+    margin: 1.7vw;
+  }
+  .banner h1 {
+    display: none;
+  }
+}
