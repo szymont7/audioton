@@ -10,6 +10,18 @@ body {
   background-color: white;
   min-height: 100vh;
 }
+.mobile {
+  display: none;
+  visibility: hidden;
+}
+.contentmobile {
+  display: none;
+  visibility: hidden;
+}
+.navbarmobile {
+  display: none;
+  visibility: hidden;
+}
 
 .banner {
   height: 44vw;
@@ -284,59 +296,229 @@ video {
 /*MOBILE SCREENS*/
 
 @media screen and (max-width: 599px) {
-  .logo {
+  .mobile {
+    display: block;
+    visibility: visible;
+  }
+  .navbarmobile {
+    display: block;
+    visibility: visible;
+  }
+  .contentmobile {
+    display: block;
+    visibility: visible;
+  }
+  .content {
+    display: none;
+    visibility: hidden;
+  }
+
+  .logocale {
     position: absolute;
-    top: 2.5vw;
-    left: 3vw;
-    z-index: 2;
-    font-size: 2.5vw;
+    z-index: 99;
+    top: 4vw;
+    left: 5vw;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+  .logo {
+    font-size: 5vw;
     font-family: nokkok;
     color: white;
   }
-
   #kreska {
-    top: 3.4vw;
-    bottom: 0;
-    position: absolute;
-    left: 20%;
-    height: 1.8vw;
-    width: 3px;
+    margin-top: 0.4vw;
+    height: 2.1vw;
+    width: 1px;
     background-color: white;
-    z-index: 5;
+    display: none;
+    visibility: hidden;
   }
   .logo2 {
-    position: absolute;
-    z-index: 2;
     font-family: nexa-light;
-    float: left;
-    top: 2.7vw;
-    left: 25vw;
     color: white;
-    font-size: 1.2vw;
-    font-weight: 400;
+    font-size: 3vw;
+    margin-top: 0.25vw;
+    text-align: center;
+    letter-spacing: 0.3vw;
+  }
+  .logo2 br {
+    content: " ";
   }
   .kontakt {
     flex-direction: column;
   }
   .navbar {
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: none;
+    visibility: hidden;
+  }
+  .navbarmobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     z-index: 5;
     font-size: 6vw;
     font-family: nexa-light;
-    width: 100%;
-    height: 10vw;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    border: 2px solid white;
+    border-bottom: none;
+    border-radius: 7px;
+    background-color: white;
+    overflow: hidden;
   }
-  .navbar a {
-    color: white;
+  .gora {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15.5vw;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .dogory {
+    font-family: nexa-light;
+    font-size: 8vw;
+    text-align: center;
+    height: 20vw;
+    background-color: white;
+    width: 9vw;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  .navbarmobile a {
+    color: black;
     font-weight: bold;
     margin: 1.7vw;
+    padding-top: 0.4vw;
   }
-  .banner h1 {
+  .banner {
     display: none;
+    visibility: hidden;
+  }
+  .bannermobile h1 {
+    font-family: nexa-light;
+    color: white;
+    font-weight: 10;
+    text-transform: uppercase;
+    text-align: left;
+    z-index: 1;
+    font-size: 15vw;
+
+    position: relative;
+  }
+  .bannermobile h1 span {
+    font-weight: 900;
+  }
+  .video-container {
+    position: relative;
+    display: flex;
+  }
+  .bannermobilecontainer {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    margin-top: 25vw;
+    margin-left: 3vw;
+    z-index: 7;
+    justify-content: center;
+  }
+  .bannermobile {
+    position: relative;
+    z-index: 2;
+  }
+  .opis {
+    font-size: 4vw;
+    margin: 5vw 1vw 0 5vw;
+    margin-bottom: 10vw;
+  }
+  .contentmobile {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: solid 2px var(--niebieski);
+    padding-bottom: 5vw;
+    margin: 2vw 3vw 0 3vw;
+    height: 15vw;
+    padding-top: 2vw;
+    padding-right: 1vw;
+  }
+  .contentmobile > * {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    text-align: center;
+    font-family: nexa-light;
+    font-size: 5vw;
+    display: block;
+  }
+  .contentmobile > * > span {
+    font-size: 7vw;
+    font-weight: bolder;
+    color: var(--niebieski);
+  }
+  .content1,
+  .content2,
+  .content3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .content1 {
+    animation: fade 8s infinite;
+    -webkit-animation: fade 8s infinite;
+  }
+  .content2 {
+    animation: fade2 8s infinite;
+    -webkit-animation: fade2 8s infinite;
+  }
+  .content3 {
+    animation: fade3 8s infinite;
+    -webkit-animation: fade3 8s infinite;
+  }
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    33.333% {
+      opacity: 0;
+    }
+    66.666% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade2 {
+    0% {
+      opacity: 0;
+    }
+    33.333% {
+      opacity: 1;
+    }
+    66.666% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fade3 {
+    0% {
+      opacity: 0;
+    }
+    33.333% {
+      opacity: 0;
+    }
+    66.666% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 }
