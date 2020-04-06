@@ -301,6 +301,10 @@ video {
   body {
     overflow-x: hidden;
   }
+  .footer {
+    display: none;
+    visibility: hidden;
+  }
 
   .mobile {
     display: block;
@@ -362,10 +366,10 @@ video {
   }
   .navbarmobile {
     position: fixed;
-    bottom: 0.3vw;
+    bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 999;
     font-size: 6vw;
     font-family: nexa-light;
     display: flex;
@@ -384,9 +388,10 @@ video {
     right: 0;
     width: 100%;
     height: 15.5vw;
-    display: flex;
     justify-content: center;
+    display: flex;
     overflow: hidden;
+    z-index: 98;
   }
   .dogory {
     font-family: nexa-light;
@@ -397,9 +402,11 @@ video {
     width: 9vw;
     border-radius: 30px;
     overflow: hidden;
+    z-index: 99;
+    color: var(--niebieski);
   }
   .navbarmobile a {
-    color: black;
+    color: var(--niebieski);
     font-weight: bold;
     margin: 1.7vw;
     padding-top: 0.4vw;
@@ -442,7 +449,6 @@ video {
   .opis {
     font-size: 4vw;
     margin: 5vw 1vw 0 5vw;
-    margin-bottom: 10vw;
   }
   .contentmobile {
     display: flex;
