@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
     <title>AUDIOTON</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -21,8 +24,8 @@
       </div>
     </a>
     <div class="navbar">
-      <a href="oferta.html">OFERTA</a>
       <a href="firma.html">FIRMA</a>
+      <a href="lokalizator.html">ZNAJDŹ NAS</a>
       <a href="kontakt.html">KONTAKT</a>
     </div>
     <div class="banner">
@@ -36,6 +39,23 @@
         <video autoplay loop muted>
           <source src="img/tlo.mp4" type="video/mp4" />
         </video>
+      </div>
+    </div>
+    <div class="mobile">
+      <div class="video-container">
+        <video autoplay loop muted>
+          <source src="img/tlomobile.mp4" type="video/mp4" />
+        </video>
+        <div class="bannermobilecontainer">
+          <div class="bannermobile">
+            <h1>
+              Czy <br />
+              słyszysz
+              <br />
+              <span>świat?</span>
+            </h1>
+          </div>
+        </div>
       </div>
     </div>
     <div class="napiskontakt">KONTAKT</div>
@@ -56,7 +76,20 @@
         <span>email:</span> magdalena.jedrzejewska@audioton.pl
       </div>
     </div>
-
+    <div class="navbarmobile">
+      <a href="firma.html">FIRMA</a>
+      <a href="lokalizator.html">ZNAJDŹ NAS</a>
+      <a href="kontakt.html">KONTAKT</a>
+    </div>
+    <div class="gora">
+      <div onclick="topFunction()" class="dogory" id="przycisk">^</div>
+    </div>
     <div class="footer"><span>AUDIOTON</span> &REG; 2020</div>
   </body>
+  <script>
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  </script>
 </html>
